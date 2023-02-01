@@ -61,7 +61,7 @@ def run():
 
                 question = "Do you want to edit an Animal 'y/Y' if not 'n/N'"
                 if input(question).lower() == "y":
-                    pos = int(input("enter position: "))
+                    # pos = int(input("enter position: "))
                     key = input("enter key ")
                     val = input("enter value ")
                     valNew = input("enter new value ")
