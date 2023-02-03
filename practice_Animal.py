@@ -21,11 +21,18 @@ def run():
     def delAnimal(db, pos):
         db.pop(pos)
 
-    def editAnimal(el, val, key, valNew):
-        if val in el.values():
-            el.update({key:valNew})
-        else:
-            print("нема такого")
+
+    def editAnimal(db, val, valNew):
+        for el in db:
+            for k in el.keys():
+                if el[k] == val:
+                    key = k  
+            if el.get(key) == val:
+                el[key] = valNew
+
+    # можна так:
+    #     if val in el.values():
+    #         el.update({key:valNew})
 
     def createAnimalProperties(Animal):
 
@@ -61,13 +68,11 @@ def run():
 
                 question = "Do you want to edit an Animal 'y/Y' if not 'n/N'"
                 if input(question).lower() == "y":
-                    # pos = int(input("enter position: "))
-                    key = input("enter key ")
+                    # pos = int(input("enter position: "))  можна без індексу!
+                    # key = input("enter key ")  і можна без ключа!
                     val = input("enter value ")
                     valNew = input("enter new value ")
-                    for el in data_base:
-                        editAnimal(el, val, key, valNew)
-
+                    editAnimal(data_base, val, valNew)
                     print(data_base)
         else:
             print(data_base)

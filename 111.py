@@ -1,42 +1,50 @@
+# db = [{'name': 'Piter', 'age': '20'}, {'name': 'Bob', 'age': '55'}]
+# db = {'name': 'Piter', 'age': '20'}
+# for key in db.keys():
+#   if db[key] == "Piter":
+#      print(key)
+
+# print(db)
+# val = "Piter"
+# key = "name"
+# x1 = db[0]
+# x2 = db[1]
+# y = x1.values()
+# z = x1.keys()
+# # print(x1)
+# # print(y)
+# print(z)
+# # print(g)
+
+# a = x1.get(key)
+# b = x2.get(key)
+
+# print(a, b)
+
+# Ну як дістати ключ зі списку ключів .keys() ????????????
+
+
+
+
+
+
+
+
+
 db = [{'name': 'Piter', 'age': '20'}, {'name': 'Bob', 'age': '55'}]
-print(db)
-val = "Piter"
-key = "name"
-x1 = db[0]
-x2 = db[1]
-y = x1.values()
-z = x1.keys()
-g = x1.get(key)
-# print(x)
-# print(y)
-print(z)
-# print(g)
 
-a = x1.get(key)
-b = x2.get(key)
+# key = input("enter key ") УРАААААААААААА!
+value = input("enter value ")
+valueNew = input("enter new value ")
+for el in db:
+    for k in el.keys():
+        if el[k] == "Piter":
+            key = k  
+    print(i)
+    if el.get(key) == value:
+        el[key] = valueNew
+print(db) 
 
-print(a, b)
-
-
-
-
-
-
-
-
-
-
-
-# key = input("enter key ")
-# value = input("enter value ")
-# valueNew = input("enter new value ")
-# i = 1
-# for el in db:   
-#     print(i)
-#     if el.get(key) == value:
-#         el[key] = valueNew
-#     i += 1
-# print(db)    
 
 
 # key = input("enter key ")
