@@ -27,8 +27,8 @@ def run():
             for k in el.keys():
                 if el[k] == val:
                     key = k  
-            if el.get(key) == val:
-                el[key] = valNew
+                # if el.get(key) == val:
+                    el[key] = valNew
 
     # можна так:
     #     if val in el.values():
